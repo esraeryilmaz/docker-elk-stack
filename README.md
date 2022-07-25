@@ -1,3 +1,33 @@
+# Docker, ELK Stack
+Docker installation and running ELK stack on docker container.
+
+## Docker Installation
+
+### System requirements
+Your machine must have WSL2 installed.
+
+#### Quick WSL2 Installation
+1. Start a command prompt as an administrator.
+2. Type the following command to install the WSL2 on Windows 10.
+```
+$ wsl --install
+```
+if it didn't work, try:
+```
+$ wsl --install -d ubuntu
+```
+3. Restart your computer to finish the WSL2 installation on Windows 10.
+
+#### Note : WSL2 consumes massive amounts of RAM. If you encounter this kind of problem, check this site : https://www.aleksandrhovhannisyan.com/blog/limiting-memory-usage-in-wsl-2/
+
+### Docker Desktop Installation
+After downloading Docker Desktop Installer.exe (https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) , run the following command on the command line.
+
+```
+$ start /w "" "Docker Desktop Installer.exe" install
+```
+Search the Docker Desktop in the search results , select and start.
+
 
 ## Installing ELK Stack on Docker
 #### It includes Elasticsearch and Kibana.
@@ -64,6 +94,9 @@ You can run and stop it for further use too
 Go to http://localhost:5601/ (localhost server we provided for Kibana) and http://localhost:9200/ (Elasticsearch host server) to check if its working fine.
 
 - You will get something like this on 9200:
-![elasticsearch]()
+
+![elasticsearch](https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/elasticsearch.PNG)
+
 - And something like this with 5601:
-![kibana]()
+
+![kibana](https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/kibana.PNG)
