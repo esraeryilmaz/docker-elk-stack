@@ -54,3 +54,16 @@ $ docker-compose -f docker-compose.yml up -d
 ```
 $ docker container ls
 ```
+![docker photo](https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/docker%20desktop.PNG)
+
+7. You can run both the Elasticseacrh and Kibana Container, if it's not already been running from the Docker Desktop, run the button provided in front of the containers’ name.
+You can run and stop it for further use too
+
+8. Last step is to finally see the end results.
+
+Go to http://localhost:5601/ (localhost server we provided for Kibana) and http://localhost:9200/ (Elasticsearch host server) to check if its working fine.
+
+- You will get something like this on 9200:
+![elasticsearch]()
+- And something like this with 5601:
+![kibana]()
