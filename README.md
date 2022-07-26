@@ -1,6 +1,9 @@
 # Docker, ELK Stack
 Docker installation and running ELK stack on docker container.
 
+## What is Docker?
+Docker is a software platform that simplifies the process of building, running, managing and distributing applications. It does this by virtualizing the operating system of the computer on which it is installed and running.
+
 ## Docker Installation
 
 ### System requirements
@@ -28,6 +31,14 @@ $ start /w "" "Docker Desktop Installer.exe" install
 ```
 Search the Docker Desktop in the search results , select and start.
 
+## What is ELK Stack?
+The ELK Stack is a collection of three open-source products — Elasticsearch, Logstash, and Kibana. ELK stack provides centralized logging in order to identify problems with servers or applications. It allows you to search all the logs in a single place.
+
+- `E` stands for ElasticSearch : used for storing logs
+- `L` stands for LogStash : used for both shipping as well as processing and storing logs
+- `K` stands for Kibana : is a visualization tool (a web interface) which is hosted through Nginx or Apache
+
+ELK Stack is designed to allow users to take data from any source, in any format, and to search, analyze, and visualize that data in real time.
 
 ## Installing ELK Stack on Docker
 #### It includes Elasticsearch and Kibana.
@@ -100,3 +111,46 @@ Go to http://localhost:5601/ (localhost server we provided for Kibana) and http:
 - And something like this with 5601:
 
 ![kibana](https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/kibana.PNG)
+
+## ELK Stack Architecture
+
+![elk stack]()
+
+- `Logs` : Server logs that need to be analyzed are identified
+- `Logstash` : Collect logs and events data. It even parses and transforms data
+- `ElasticSearch` : The transformed data from Logstash is Store, Search, and indexed.
+- `Kibana` : Kibana uses Elasticsearch DB to Explore, Visualize, and Share
+
+### Elastic Search 
+Elasticsearch is a real-time distributed and open source full-text search and analytics engine. It is accessible from RESTful web service interface and uses schema less JSON (JavaScript Object Notation) documents to store data.
+
+![relational vs elastic]()
+
+#### Key concepts or important terms used in Elasticsearch, which are ;  
+
+1. `Node` : A node is an instance of Elasticsearch, which is used to store data. It creates when an Elasticsearch instance starts running.
+
+2. `Cluster` : A cluster is a collection of nodes which together holds data and provides joined indexing and search capabilities.
+
+3. `Document` : Documents are the things you’re searching for. They can be more than text – any structured JSON data works. Every document has a unique ID, and a type. 
+
+4. `Field` : Columns in relational databases qualify as Fields in Elasticsearch. Each document has more than one field.
+
+5. `Index` : Index is a group of different types of documents. It helps to perform search, update, and delete operation as well as indexing. In a relational database, an index is represented as a table, which means the index is analogous to a table in RDBMS. 
+
+6. `Shard` : Every index can be split into several shards to be able to distribute data. The shard is the atomic part of an index, which can be distributed over the cluster if you want to add more nodes.
+
+7. `Replicas` : Replicas are an additional copy of shards. They perform queries just like a shard. Elasticsearch enables the users to create replicas of their indexes and shards.
+
+8. `Type` : In Elasticsearch, a type is defined for documents that have a common set of fields. It is a logical category of index whose semantics depends on users.
+
+9. `Mapping` : In Elasticsearch, each index has a mapping associated with it, which is a schema-definition of the data that can be held by each individual document in an index. When the data is pushed to an index, the mapping is automatically added.
+
+
+### Advantages of Elasticsearch
+- High Performance
+- Easily Scalable
+- Document oriented (JSON)
+- Open-source
+
+
