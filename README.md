@@ -114,7 +114,7 @@ Go to http://localhost:5601/ (localhost server we provided for Kibana) and http:
 
 ## ELK Stack Architecture
 
-![elk stack]()
+![elk stack](https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/elk%20stack.PNG)
 
 - `Logs` : Server logs that need to be analyzed are identified
 - `Logstash` : Collect logs and events data. It even parses and transforms data
@@ -124,7 +124,7 @@ Go to http://localhost:5601/ (localhost server we provided for Kibana) and http:
 ### Elastic Search 
 Elasticsearch is a real-time distributed and open source full-text search and analytics engine. It is accessible from RESTful web service interface and uses schema less JSON (JavaScript Object Notation) documents to store data.
 
-![relational vs elastic]()
+<img src="https://github.com/esraeryilmaz/docker-elk-stack/blob/main/img/relational%20vs%20elastic.png" width="400"/>
 
 #### Key concepts or important terms used in Elasticsearch, which are ;  
 
