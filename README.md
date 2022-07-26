@@ -147,7 +147,7 @@ Elasticsearch is a real-time distributed and open source full-text search and an
 9. `Mapping` : In Elasticsearch, each index has a mapping associated with it, which is a schema-definition of the data that can be held by each individual document in an index. When the data is pushed to an index, the mapping is automatically added.
 
 
-### Advantages of Elasticsearch
+#### Advantages of Elasticsearch
 - High Performance
 - Easily Scalable
 - Document oriented (JSON)
